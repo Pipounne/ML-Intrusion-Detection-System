@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, graphicx, hyperref}
+
+\title{Detection Analysis - Pre-Project Document}
+\author{Carl Klink, Romain Lefebvre, Julie Muller, Benoit Hua}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Business Challenge and State-of-the-Art}
+
+\subsection{Business Challenge}
+Intrusion detection is a crucial component of modern cybersecurity, helping organizations identify unauthorized access and mitigate security risks in real-time. This project will use the NSL-KDD dataset to analyze network traffic data for intrusion detection, exploring patterns in normal versus malicious activity and identifying effective ways to classify different types of attacks.
+
+\subsection{State-of-the-Art}
+Current intrusion detection systems (IDS) employ machine learning models to identify network anomalies. The NSL-KDD dataset is widely used in IDS research and addresses some limitations of the original KDD Cup 1999 dataset, such as removing redundant records, which can improve analysis accuracy. Drawing from Tim Goodfellow’s exploration of this dataset, we aim to investigate feature importance, develop classification models, and assess model performance in distinguishing between attack and normal traffic.
+
+\section{Data Description and Data Sources}
+
+\subsection{Data Description}
+The NSL-KDD dataset, available on Kaggle, contains labeled network traffic records for training and testing intrusion detection systems. Key attributes include:
+\begin{itemize}
+    \item Duration, Protocol Type, Service: Basic features describing network connection parameters.
+    \item Flag, Source Bytes, Destination Bytes: Indicators of packet flow and size.
+    \item Land, Wrong Fragment, Urgent: Indicators of potentially malicious activity.
+    \item Label: Class labels indicating normal traffic or various attack types (e.g., DoS, probe, U2R, R2L).
+\end{itemize}
+
+\subsection{Data Sources}
+The primary dataset source is Kaggle, but additional data sources on network intrusion detection or specific attack types may be used to enhance understanding and model performance.
+
+\section{Business Objectives and Scope}
+
+\subsection{Objectives}
+The objectives of this project are to:
+\begin{itemize}
+    \item Identify distinguishing features between normal and malicious network traffic.
+    \item Build and evaluate machine learning models to classify traffic as normal or as one of the attack types.
+    \item Examine the model’s performance on specific attack types to improve the detection rate of less frequent attack categories.
+\end{itemize}
+
+\subsection{Scope}
+This project will focus on:
+\begin{itemize}
+    \item Analyzing the NSL-KDD dataset’s network connection records.
+    \item Developing models to classify traffic types, focusing on improving accuracy for all four primary attack classes.
+    \item Evaluating model performance using metrics such as accuracy, precision, recall, and F1-score.
+\end{itemize}
+
+\section{Work Plan}
+\begin{itemize}
+    \item \textbf{Stage 1: Implementation of Standard Solutions} - Deadline: 8/11
+    \item \textbf{Stage 2: Improving the Standard Solution} - Deadline: 28/11
+    \item \textbf{Stage 3: Further Improvements and Exploration} - Deadline: 5/12
+\end{itemize}
+
+\subsection{Steps}
+\begin{enumerate}
+    \item Data Preprocessing: Clean and encode categorical features, normalize numerical features, and handle missing data if any.
+    \item Exploratory Data Analysis (EDA): Analyze feature distributions, identify correlations, and determine feature importance.
+    \item Model Selection and Training: Test different classifiers (e.g., Decision Tree, Random Forest, SVM) to find the most effective model for intrusion detection.
+    \item Evaluation and Tuning: Use cross-validation and hyperparameter tuning to optimize model performance and analyze model outputs.
+    \item Insights and Visualization: Visualize classification results, feature importance, and performance metrics.
+\end{enumerate}
+
+\subsection{Data Analysis and Pre-processing}
+\begin{itemize}
+    \item Check data quality, explore statistical information, handle missing values, address imbalanced data, perform correlation analysis, and consider dimensionality reduction if needed.
+\end{itemize}
+
+\subsection{Model Implementation}
+Use algorithms covered in class (e.g., Decision Trees, Naive Bayes, or KNN) to implement initial solutions.
+
+\subsection{Learning and Testing Plan}
+Define your data split strategy, ensure methods to manage overfitting (e.g., validation techniques, regularization).
+
+\section{Conclusion}
+This project aims to improve network intrusion detection by developing models that accurately classify malicious traffic. By analyzing patterns in the NSL-KDD dataset, we hope to provide insights into effective features and detection methods, offering guidance for developing more robust IDS solutions.
+
+\section{References}
+\begin{itemize}
+    \item Kaggle. (n.d.). NSL-KDD Dataset. Retrieved from \url{https://www.kaggle.com/datasets/hassan06/nslkdd}
+    \item Additional references will be added during the project as needed.
+\end{itemize}
+
+\end{document}
