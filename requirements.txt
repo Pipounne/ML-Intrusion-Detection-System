@@ -1,2 +1,5 @@
 pandas
 spicy
+seaborn
+matplotlib
+skicit-learn
