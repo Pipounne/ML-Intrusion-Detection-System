@@ -1,5 +1,7 @@
-pandas
-spicy
-seaborn
-matplotlib
-skicit-learn
+pandas==1.5.3
+scipy==1.10.1
+matplotlib==3.7.2
+seaborn==0.12.2
+scikit-learn==1.3.0
+numpy==1.24.3
+jupyter==1.0.0
